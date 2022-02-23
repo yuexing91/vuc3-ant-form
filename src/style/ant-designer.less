@@ -1,0 +1,37 @@
+html,
+body {
+  height: 100%;
+}
+
+.vuc-app-wrapper {
+
+  .ant-row, .ant-col, .ant-form {
+    &[data-ast-id]:empty {
+      min-height: 40px;
+    }
+  }
+
+  &>.ant-form {
+    &[data-ast-id]:empty {
+      &:before {
+        content: ' 请拖拽左侧组件到此 ';
+        margin: 12px;
+        color: #a1a1a1;
+      }
+    }
+  }
+
+
+  .ant-tabs-tabpane {
+    &[data-ast-id] {
+      min-height: 40px;
+    }
+  }
+
+  .ant-form-item {
+    &[data-ast-id] > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children:empty {
+      display: inline-block;
+      min-height: 19px;
+    }
+  }
+}

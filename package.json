@@ -1,24 +1,28 @@
 {
-  "name": "vuc-ant-form",
+  "name": "vuc3-ant-form",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "build": "vue-cli-service build --target lib --name vuc-ant-form ./src/index.js ",
+    "lint": "vue-cli-service lint",
+    "build:example": "vue-cli-service build ./example/main.js "
   },
+  "main": "./dist/vuc-ant-form.umd.js",
   "dependencies": {
     "core-js": "^3.6.5",
-    "vue": "^3.0.0"
+    "vuc3": "^0.1.2",
+    "vue": "^3.2.24"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
-    "@vue/compiler-sfc": "^3.0.0",
+    "@vue/compiler-sfc": "^3.2.24",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^7.0.0"
+    "eslint-plugin-vue": "^7.0.0",
+    "less-loader": "^5.0.0",
+    "webpack-node-externals": "^3.0.0"
   },
   "eslintConfig": {
     "root": true,
@@ -38,5 +42,8 @@
     "> 1%",
     "last 2 versions",
     "not dead"
+  ],
+  "files": [
+    "/dist"
   ]
 }
